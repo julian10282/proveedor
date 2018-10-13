@@ -18,10 +18,10 @@ public class Oferta {
 
 	private String description;
 	
-	private List<Item> items;
+	private List<Item> itemEntities;
 
 	public Oferta(int id, int requestId, float total, boolean enabled, int supplierDocument, String name,
-			String description, List<Item> items) {
+			String description, List<Item> itemEntities) {
 		super();
 		this.id = id;
 		this.requestId = requestId;
@@ -30,7 +30,7 @@ public class Oferta {
 		this.supplierDocument = supplierDocument;
 		this.name = name;
 		this.description = description;
-		this.items = items;
+		this.itemEntities = itemEntities;
 	}
 
 	public Oferta() {
@@ -92,19 +92,19 @@ public class Oferta {
 		this.description = description;
 	}
 
-	public List<Item> getItems() {
-		return items;
+	public List<Item> getItemEntities() {
+		return itemEntities;
 	}
 
-	public void setItems(List<Item> items) {
-		this.items = items;
+	public void setItemEntities(List<Item> itemEntities) {
+		this.itemEntities = itemEntities;
 	}
 
 	@Override
 	public String toString() {
 		return "Oferta [id=" + id + ", requestId=" + requestId + ", total=" + total + ", enabled=" + enabled
 				+ ", supplierDocument=" + supplierDocument + ", name=" + name + ", description=" + description
-				+ ", items=" + items + "]";
+				+ ", itemEntities=" + itemEntities + "]";
 	}
 	
 }

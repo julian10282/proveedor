@@ -36,8 +36,8 @@ public class CotizacionService {
 		LOG.info("Cotizacion recibida ='" + cotizacion.toString()+"'");
 		List<Item> items = new ArrayList<>();
 		float total = 0;
-		if (cotizacion.getItems() != null) {
-			for (Item item : cotizacion.getItems()) {
+		if (cotizacion.getItemEntities() != null) {
+			for (Item item : cotizacion.getItemEntities()) {
 				item.setPrice(generarValorAleatorio());
 				items.add(item);
 				total += item.getPrice();

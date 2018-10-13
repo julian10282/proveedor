@@ -6,34 +6,34 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class Cotizacion {
-	
+
 	@Override
 	public String toString() {
 		return "Cotizacion [id=" + id + ", clientDocument=" + clientDocument + ", startDate=" + startDate
 				+ ", finalDate=" + finalDate + ", enabled=" + enabled + ", name=" + name + ", description="
-				+ description + ", items=" + items + "]";
+				+ description + ", items=" + itemEntities + "]";
 	}
 
 	private int id;
 
 	private String clientDocument;
-	
-	@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss", timezone="America/Bogota")
+
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "America/Bogota")
 	private Date startDate;
-	
-	@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss", timezone="America/Bogota")
+
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "America/Bogota")
 	private Date finalDate;
-	
+
 	private boolean enabled;
-	
+
 	private String name;
 
 	private String description;
-	
-	private List<Item> items;
+
+	private List<Item> itemEntities;
 
 	public Cotizacion(int id, String clientDocument, Date startDate, Date finalDate, boolean enabled, String name,
-			String description, List<Item> items) {
+			String description, List<Item> itemEntities) {
 		super();
 		this.id = id;
 		this.clientDocument = clientDocument;
@@ -42,7 +42,7 @@ public class Cotizacion {
 		this.enabled = enabled;
 		this.name = name;
 		this.description = description;
-		this.items = items;
+		this.itemEntities = itemEntities;
 	}
 
 	public Cotizacion() {
@@ -104,14 +104,12 @@ public class Cotizacion {
 		this.description = description;
 	}
 
-	public List<Item> getItems() {
-		return items;
+	public List<Item> getItemEntities() {
+		return itemEntities;
 	}
 
-	public void setItems(List<Item> items) {
-		this.items = items;
+	public void setItemEntities(List<Item> itemEntities) {
+		this.itemEntities = itemEntities;
 	}
 
-	
-	
 }
