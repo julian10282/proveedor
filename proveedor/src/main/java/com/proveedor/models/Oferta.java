@@ -1,5 +1,7 @@
 package com.proveedor.models;
 
+import java.util.List;
+
 public class Oferta {
 
 	private int id;
@@ -15,9 +17,11 @@ public class Oferta {
 	private String name;
 
 	private String description;
+	
+	private List<Item> items;
 
 	public Oferta(int id, int requestId, float total, boolean enabled, int supplierDocument, String name,
-			String description) {
+			String description, List<Item> items) {
 		super();
 		this.id = id;
 		this.requestId = requestId;
@@ -26,6 +30,7 @@ public class Oferta {
 		this.supplierDocument = supplierDocument;
 		this.name = name;
 		this.description = description;
+		this.items = items;
 	}
 
 	public Oferta() {
@@ -87,13 +92,19 @@ public class Oferta {
 		this.description = description;
 	}
 
+	public List<Item> getItems() {
+		return items;
+	}
+
+	public void setItems(List<Item> items) {
+		this.items = items;
+	}
+
 	@Override
 	public String toString() {
 		return "Oferta [id=" + id + ", requestId=" + requestId + ", total=" + total + ", enabled=" + enabled
-				+ ", supplierDocument=" + supplierDocument + ", name=" + name + ", description=" + description + "]";
+				+ ", supplierDocument=" + supplierDocument + ", name=" + name + ", description=" + description
+				+ ", items=" + items + "]";
 	}
-
-//	private List<ItemEntity> itemEntities;
-	
 	
 }

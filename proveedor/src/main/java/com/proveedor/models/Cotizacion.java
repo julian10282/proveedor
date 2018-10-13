@@ -1,6 +1,7 @@
 package com.proveedor.models;
 
 import java.util.Date;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -10,7 +11,7 @@ public class Cotizacion {
 	public String toString() {
 		return "Cotizacion [id=" + id + ", clientDocument=" + clientDocument + ", startDate=" + startDate
 				+ ", finalDate=" + finalDate + ", enabled=" + enabled + ", name=" + name + ", description="
-				+ description + "]";
+				+ description + ", items=" + items + "]";
 	}
 
 	private int id;
@@ -28,9 +29,11 @@ public class Cotizacion {
 	private String name;
 
 	private String description;
+	
+	private List<Item> items;
 
 	public Cotizacion(int id, int clientDocument, Date startDate, Date finalDate, boolean enabled, String name,
-			String description) {
+			String description, List<Item> items) {
 		super();
 		this.id = id;
 		this.clientDocument = clientDocument;
@@ -39,6 +42,7 @@ public class Cotizacion {
 		this.enabled = enabled;
 		this.name = name;
 		this.description = description;
+		this.items = items;
 	}
 
 	public Cotizacion() {
@@ -100,7 +104,12 @@ public class Cotizacion {
 		this.description = description;
 	}
 
-//	private List<ItemEntity> itemEntities;
-	
+	public List<Item> getItems() {
+		return items;
+	}
+
+	public void setItems(List<Item> items) {
+		this.items = items;
+	}
 	
 }
