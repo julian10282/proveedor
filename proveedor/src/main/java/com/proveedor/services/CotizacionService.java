@@ -44,7 +44,7 @@ public class CotizacionService {
 			}
 		}
 		
-		Oferta oferta = new Oferta(0, cotizacion.getId(), total, true, 1020750568, "Oferta 1", "Oferta del proveedor 1", items);
+		Oferta oferta = new Oferta(0, cotizacion.getId(), total, true, 880114561, "Oferta unilago", "Oferta del proveedor de unilago", items);
 		
 		LOG.info("Oferta enviada ='" + oferta.toString()+"'");
 		

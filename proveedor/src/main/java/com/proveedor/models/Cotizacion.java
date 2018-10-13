@@ -16,7 +16,7 @@ public class Cotizacion {
 
 	private int id;
 
-	private int clientDocument;
+	private String clientDocument;
 	
 	@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss", timezone="America/Bogota")
 	private Date startDate;
@@ -32,7 +32,7 @@ public class Cotizacion {
 	
 	private List<Item> items;
 
-	public Cotizacion(int id, int clientDocument, Date startDate, Date finalDate, boolean enabled, String name,
+	public Cotizacion(int id, String clientDocument, Date startDate, Date finalDate, boolean enabled, String name,
 			String description, List<Item> items) {
 		super();
 		this.id = id;
@@ -56,11 +56,11 @@ public class Cotizacion {
 		this.id = id;
 	}
 
-	public int getClientDocument() {
+	public String getClientDocument() {
 		return clientDocument;
 	}
 
-	public void setClientDocument(int clientDocument) {
+	public void setClientDocument(String clientDocument) {
 		this.clientDocument = clientDocument;
 	}
 
@@ -111,5 +111,7 @@ public class Cotizacion {
 	public void setItems(List<Item> items) {
 		this.items = items;
 	}
+
+	
 	
 }
