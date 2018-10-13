@@ -37,7 +37,7 @@ public class CotizacionService {
 		List<Item> items = new ArrayList<>();
 		float total = 0;
 		if (cotizacion.getItems() != null) {
-			for (Item item : items) {
+			for (Item item : cotizacion.getItems()) {
 				item.setPrice(generarValorAleatorio());
 				items.add(item);
 				total += item.getPrice();
