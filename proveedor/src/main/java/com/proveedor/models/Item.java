@@ -6,6 +6,8 @@ public class Item {
 	private int id;
 	
 	private int requestId;
+	
+	private int offerId;
 
 	private int quantity;
 
@@ -15,10 +17,12 @@ public class Item {
 
 	private int productId;
 
-	public Item(int id, int requestId, int quantity, long price, boolean enabled, int productId) {
+
+	public Item(int id, int requestId, int offerId, int quantity, long price, boolean enabled, int productId) {
 		super();
 		this.id = id;
 		this.requestId = requestId;
+		this.offerId = offerId;
 		this.quantity = quantity;
 		this.price = price;
 		this.enabled = enabled;
@@ -76,9 +80,17 @@ public class Item {
 		this.productId = productId;
 	}
 
+	public int getOfferId() {
+		return offerId;
+	}
+
+	public void setOfferId(int offerId) {
+		this.offerId = offerId;
+	}
+
 	@Override
 	public String toString() {
-		return "Item [id=" + id + ", requestId=" + requestId + ", quantity=" + quantity + ", price=" + price
-				+ ", enabled=" + enabled + ", productId=" + productId + "]";
+		return "Item [id=" + id + ", requestId=" + requestId + ", offerId=" + offerId + ", quantity=" + quantity
+				+ ", price=" + price + ", enabled=" + enabled + ", productId=" + productId + "]";
 	}
 }
